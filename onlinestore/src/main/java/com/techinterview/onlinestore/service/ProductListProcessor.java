@@ -58,12 +58,11 @@ public class ProductListProcessor {
         if(products == null){
             return null;
         }
-        StringBuilder resultStringBuilder = new StringBuilder();
-        for(Product product : products) {
-            resultStringBuilder.append(product.convertToString())
-                    .append("\n");
+        ProductListBuilder builder = new BasicProductListBuilder();
+        for(Product product: products){
+            builder.add(product);
         }
-        return resultStringBuilder.toString();
+        return builder.build();
     }
 
 }
