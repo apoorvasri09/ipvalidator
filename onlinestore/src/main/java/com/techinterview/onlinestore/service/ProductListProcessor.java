@@ -55,6 +55,9 @@ public class ProductListProcessor {
      * @return String representation of the provided list.
      */
     public String productListToString(List<Product> products) {
+        if(products == null){
+            return null;
+        }
         StringBuilder resultStringBuilder = new StringBuilder();
         for(Product product : products) {
             resultStringBuilder.append(product.convertToString())

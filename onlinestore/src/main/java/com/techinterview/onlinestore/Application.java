@@ -10,6 +10,7 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) {
         ProductListProcessor pp = new ProductListProcessor();
+
         BackPack product = new BackPack("001", "Salt") ;
         product.setCapacity(11);
         product.setMaxContentWeight(22);
@@ -22,6 +23,6 @@ public class Application {
         list.add(product);
         list.add(smartPhone);
 
-        System.out.println(pp.productListToString( list));
+        System.out.println(pp.productListToString( null));
     }
 }
