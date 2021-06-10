@@ -1,6 +1,6 @@
 package com.techinterview.onlinestore.service;
 
-import com.techinterview.onlinestore.domain.Product;
+import com.techinterview.onlinestore.domain.*;
 
 import java.util.List;
 
@@ -49,11 +49,18 @@ import java.util.List;
 public class ProductListProcessor {
 
     /**
-     * Make String representation of providd product list.
+     * Make String representation of provided product list.
+     *
+     * @param o
      * @param products list of the products that needs to be converted to String
      * @return String representation of the provided list.
      */
-    public String productListToString(List<Product> products) {
-        return null;
+    public String productListToString(Object o, List<Product> products) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Product product : products) {
+
+        }
+        return stringBuilder.toString();
     }
+
 }

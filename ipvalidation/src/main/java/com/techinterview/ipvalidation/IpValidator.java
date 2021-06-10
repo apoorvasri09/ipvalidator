@@ -38,6 +38,19 @@ public class IpValidator {
      * @return true if provided IP address is covered by the CIDR range; false otherwise.
      */
     public static boolean validateIpAddress(String ipAddress, String cidrRange) {
-        return false;
+            try{
+                CidrRange cidr = new CidrRange(cidrRange);
+                IPAddress ip = new IPAddress(ipAddress);
+                if(!cidr.isValid() || !ip.isValid()){
+                    throw new IllegalArgumentException();
+                }
+                if (!cidr.isValidCidrMatching(ip)) {
+                    return false;
+                }
+            }catch (NumberFormatException e){
+                throw new IllegalArgumentException();
+            }
+        return true;
     }
+
 }
