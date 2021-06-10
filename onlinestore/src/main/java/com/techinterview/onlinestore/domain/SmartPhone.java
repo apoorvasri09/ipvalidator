@@ -35,6 +35,18 @@ public class SmartPhone extends Product {
         super(guid, name);
     }
 
+    @Override
+    public String convertToString() {
+        return new StringBuilder()
+                .append(getName()).append("(").append(getGuid()).append(")").append(", ")
+                .append("manufacturer" + " : ").append(getManufacturer()).append(", ")
+                .append("color" + " : ").append(getColor()).append(", ")
+                .append("numberOfCPUs" + " : ").append(getNumberOfCPUs()).append(", ")
+                .append("ramSize" + " : ").append(getRamSize()).append(", ")
+                .append("screeResolution" + " : ").append(getScreenResolution())
+                .toString();
+    }
+
     public String getManufacturer() {
         return manufacturer;
     }

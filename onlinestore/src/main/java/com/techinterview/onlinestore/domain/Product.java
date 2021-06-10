@@ -20,6 +20,7 @@ public abstract class Product {
         this.guid = guid;
         this.name = name;
     }
+    public abstract String convertToString();
 
     public String getGuid() {
         return guid;

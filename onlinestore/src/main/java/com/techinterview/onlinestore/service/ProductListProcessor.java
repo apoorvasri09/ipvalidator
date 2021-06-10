@@ -50,17 +50,17 @@ public class ProductListProcessor {
 
     /**
      * Make String representation of provided product list.
-     *
-     * @param o
+
      * @param products list of the products that needs to be converted to String
      * @return String representation of the provided list.
      */
-    public String productListToString(Object o, List<Product> products) {
-        StringBuilder stringBuilder = new StringBuilder();
+    public String productListToString(List<Product> products) {
+        StringBuilder resultStringBuilder = new StringBuilder();
         for(Product product : products) {
-
+            resultStringBuilder.append(product.convertToString())
+                    .append("\n");
         }
-        return stringBuilder.toString();
+        return resultStringBuilder.toString();
     }
 
 }

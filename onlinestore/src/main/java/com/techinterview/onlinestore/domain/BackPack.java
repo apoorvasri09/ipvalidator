@@ -25,6 +25,17 @@ public class BackPack extends Product {
         super(guid, name);
     }
 
+    @Override
+    public String convertToString() {
+
+        return new StringBuilder()
+                .append(getName()).append("(").append(getGuid()).append(")").append(", ")
+                .append("maxContentWeight" + " : ").append(getMaxContentWeight()).append(", ")
+                .append("color" + " : ").append(getColor()).append(", ")
+                .append("capacity" + " : ").append(getCapacity())
+                .toString();
+    }
+
     public double getMaxContentWeight() {
         return maxContentWeight;
     }
